@@ -1,6 +1,7 @@
 package com.example.tflite_test;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -67,23 +68,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        Button drawSampleBtn = findViewById(R.id.draw_sample_Btn);
-//        drawSampleBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(MainActivity.this, DrawingActivity.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//        Button drawBtn = findViewById(R.id.draw_Btn);
-//        drawBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(MainActivity.this, DrawActivity.class);
-//                startActivity(i);
-//            }
-//        });
+        Button drawSampleBtn = findViewById(R.id.draw_sample_Btn);
+        drawSampleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, DrawActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button drawBtn = findViewById(R.id.draw_Btn);
+        drawBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, DrawActivity.class);
+                startActivity(i);
+            }
+        });
+
 
     }
 }
