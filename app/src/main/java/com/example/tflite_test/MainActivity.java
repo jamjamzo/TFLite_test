@@ -18,74 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        EditText editText = (EditText)findViewById(R.id.input_Et);
-        Button button = (Button)findViewById(R.id.input_Btn);
-        TextView textView = (TextView)findViewById(R.id.output_Tv);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String text = editText.getText().toString();
-                textView.setText(text);
-
-//                try {
-//                    Thread.sleep(10 * 1000);
-//                    Toast.makeText(MainActivity.this, "complete", Toast.LENGTH_SHORT).show();
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            Thread.sleep(10 * 1000);
-                            Toast.makeText(MainActivity.this, "complete", Toast.LENGTH_SHORT).show();
-//                            runOnUiThread(new Runnable() {
-//                                @Override
-//                                public void run() {
-//                                    Toast.makeText(MainActivity.this, "complete", Toast.LENGTH_SHORT).show();
-//                                }
-//                            });
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }).start();
-            }
+        Button drawBtn = findViewById(R.id.drawBtn);
+        drawBtn.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, DrawActivity.class);
+            startActivity(i);
         });
-
-//        button.setOnClickListener(view -> {
-//        });
-
-        Button actBtn = findViewById(R.id.activity_launch_Btn);
-        actBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, MyActivity.class);
-                startActivity(i);
-            }
-        });
-
-        Button drawSampleBtn = findViewById(R.id.draw_sample_Btn);
-        drawSampleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, DrawActivity.class);
-                startActivity(i);
-            }
-        });
-
-        Button drawBtn = findViewById(R.id.draw_Btn);
-        drawBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, DrawActivity.class);
-                startActivity(i);
-            }
-        });
-
-
     }
 }
