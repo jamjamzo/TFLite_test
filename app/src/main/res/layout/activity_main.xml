@@ -12,7 +12,7 @@
         android:id="@+id/activity_launch_Btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="액티비티 실행" />
+        android:text="Activity Test" />
 
     <Button
         android:id="@+id/drawBtn"
@@ -24,7 +24,7 @@
         android:id="@+id/recordBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="그림판 예제" />
+        android:text="Record" />
 
 
 
